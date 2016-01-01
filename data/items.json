@@ -1,0 +1,68 @@
+[
+	{
+		"id": 1,
+		"name": "Mobiles",
+		"description": "This is just a simple item",
+		"image": "/assets/mobiles.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Hand-Bags",
+		"description": "This is just a simple item",
+		"image": "/assets/handbags.jpg"
+	},
+	{
+		"id": 3,
+		"name": "Televisions",
+		"description": "This is just a simple item",
+		"image": "/assets/televisions.jpg"
+	},
+	{
+		"id": 4,
+		"name":"Laptops",
+		"description": "This is just a simple item",
+		"image": "/assets/laptops.jpg"
+	},
+	{
+		"id": 5,
+		"name": "Kitchen Appliances",
+		"description": "This is just a simple item",
+		"image": "/assets/kitchens.jpg"
+	},
+	{
+		"id": 6,
+		"name": "Hair Care",
+		"description": "This is just a simple item",
+		"image": "/assets/haircare.jpg"
+	},
+	{
+		"id": 7,
+		"name": "Sports",
+		"description": "This is just a simple item",
+		"image": "assets/sports.jpg"
+	},
+	{
+		"id": 8,
+		"name": "Hard Disks",
+		"description": "This is just a simple item",
+		"image": "/assets/harddisks.jpg"
+	},
+	{
+		"id": 9,
+		"name": "External Storage",
+		"description": "This is just a simple item",
+		"image": "/assets/extstorage.jpg"
+	},
+	{
+		"id": 10,
+		"name": "Sofa",
+		"description": "This is just a simple item",
+		"image": "/assets/sofas.jpg"
+	},
+	{
+		"id": 11,
+		"name": "Furniture",
+		"description": "This is just a simple item",
+		"image": "/assets/furniture.jpg"
+	}
+]

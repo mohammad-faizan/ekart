@@ -1,0 +1,13 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.item-image {
+	width: 250px;
+	height: 200px;
+	border: 1px solid #ccc;
+}
+
+.mg-top {
+	margin-top: 20px;
+}
