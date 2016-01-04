@@ -42,3 +42,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'mongoid', '~> 5.0.0'
 gem 'thin'
+gem 'byebug', group: [:development, :test]
+gem 'mongoid-paperclip', :require => 'mongoid_paperclip'

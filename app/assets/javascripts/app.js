@@ -1,4 +1,11 @@
-var ekartApp = angular.module('Ekart', ['ngRoute', 'appControllers'])
+var ekartApp = angular.module('Ekart', 
+	[
+		'ngRoute',
+		'appControllers',
+		'availabilityFilter',
+		'itemServices'
+	]
+);
 
 ekartApp.config(['$routeProvider', function($routeProvider){
 	$routeProvider.
@@ -6,9 +13,13 @@ ekartApp.config(['$routeProvider', function($routeProvider){
 			templateUrl: 'partials/item-list.html',
 			controller: 'HomeController'
 		}).
-		when('/:item_id', {
+		when('/:id', {
 			templateUrl: 'partials/item-details.html',
 			controller: 'ItemController'
+		}).
+		when('/item/new', {
+			templateUrl: 'partials/item-form.html',
+			controller: 'NewItemController'
 		}).
 		otherwise({
 			redirectTo: '/'

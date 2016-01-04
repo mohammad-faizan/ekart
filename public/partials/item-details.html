@@ -1,1 +1,23 @@
-TBD: To be added later
+<div class='container'>
+	<div class='col-sm-8'>
+		<dl>
+			<dt>Item Name : </dt>
+			<dd>{{ item.name }}</dd>
+		</dl>
+
+		<dl>
+			<dt>Item Description : </dt>
+			<dd>{{ item.description }}</dd>
+		</dl>
+
+		<dl>
+			<dt>Item Image : </dt>
+			<dd><img ng-src='{{ item.image }}'></dd>
+		</dl>
+	</div>
+
+		<dl>
+			<dt>Available (In Stock) : </dt>
+			<dd class='availability'>{{ item.available | checkmark }}</dd>
+		</dl>
+</div>

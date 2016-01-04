@@ -1,17 +1,43 @@
 class ItemsController < ApplicationController
 
-	respond_to :json
+	respond_to :html, :json
 	def index
-	end
-
-	def data
-		file = File.read('data/items.json')
-		if params[:item_id].present?
-			hash_data = JSON.parse(file)
-			item = hash_data[params[:item_id]]
-			render json: item
-		else
-			render json: file
+		respond_to do |f|
+			f.html
+			f.json do
+				file = JSON.parse(File.read('data/items.json'))
+				if params[:id].present?
+					item = file.select { |item| item["id"] == params[:id].to_i}.first
+					render json: item
+				else
+					@items = Item.all
+					render json: @items
+				end
+			end
 		end
 	end
+
+	def create
+		item = Item.new(item_params)
+		if item.save
+			render json: { status: 200, item: item }
+		else
+			render json: { status: 500 }
+		end
+	end
+
+	private
+
+	def item_params
+		params.require(:item).permit!
+	end
+	# def data
+	# 	file = JSON.parse(File.read('data/items.json'))
+	# 	if params[:id].present?
+	# 		item = file.select { |item| item["id"] == params[:id].to_i}.first
+	# 		render json: item
+	# 	else
+	# 		render json: file
+	# 	end
+	# end
 end
