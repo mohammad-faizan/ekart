@@ -10,4 +10,12 @@ class Item
 
 	embeds_many :pictures
 
+	def as_json(*args)
+		res = super
+
+		res["_id"] = res["_id"].to_s
+
+		res
+	end
+
 end

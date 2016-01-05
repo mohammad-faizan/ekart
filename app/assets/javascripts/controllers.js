@@ -9,6 +9,10 @@ appController.controller('ItemController', ['$scope', '$routeParams', 'Api', fun
 	$scope.item = Api.get({id: $routeParams.id});
 }]);
 
+appController.controller('EditItemController', ['$scope', '$routeParams', 'Api', function($scope, $routeParams, Api) {
+	$scope.item = Api.get({id: $routeParams.id});
+}]);
+
 appController.controller('NewItemController', ['$scope', '$routeParams', '$location', 'Api', function($scope, $routeParams, $location, Api) {
 	$scope.categoryOptions = [
 		"Electronics",

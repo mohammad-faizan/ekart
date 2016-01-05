@@ -29,11 +29,15 @@
     <div ng-repeat='item in items | filter: searchQuery | orderBy: sortBy' class="container mg-top">
       <div class="row">
         <div class="col-xs-3">
-          <a href="#/{{ item.id }}"><img ng-src='{{ item.image }}' class='item-image'></a>
+          <a href="#/{{ item._id }}"><img ng-src='{{ item.image }}' class='item-image'></a>
         </div>
         <div class="col-xs-6">
           <dl id='item-{{item.id}}'>
-            <dt>{{ item.name }}</dt>
+            <dt>
+              <div class='pull-left'>{{ item.name }}</div>
+              <div class='pull-right'><a href='#/items/{{ item._id }}/edit'>Edit</a></div>
+              <div class='clearfix'></div>
+            </dt>
             <dd>{{ item.description }}</dd>
           </dl>
         </div>

@@ -17,7 +17,11 @@ ekartApp.config(['$routeProvider', function($routeProvider){
 			templateUrl: 'partials/item-details.html',
 			controller: 'ItemController'
 		}).
-		when('/item/new', {
+		when('/items/:id/edit', {
+			templateUrl: 'partials/item-form.html',
+			controller: 'EditItemController'
+		}).
+		when('/items/new', {
 			templateUrl: 'partials/item-form.html',
 			controller: 'NewItemController'
 		}).

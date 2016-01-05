@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
 					render json: item
 				else
 					@items = Item.all
-					render json: @items
+					render json: @items.as_json
 				end
 			end
 		end
@@ -24,6 +24,11 @@ class ItemsController < ApplicationController
 		else
 			render json: { status: 500 }
 		end
+	end
+
+	def show
+		@item = Item.find_by(id: params[:id])
+		respond_with(@item)
 	end
 
 	private
