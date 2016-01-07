@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
 
+	before_action :set_item, only: [:show, :add_image]
 	respond_to :html, :json
 	def index
 		respond_to do |f|
@@ -27,7 +28,14 @@ class ItemsController < ApplicationController
 	end
 
 	def show
-		@item = Item.find_by(id: params[:id])
+		respond_with(@item.as_embedded.to_json)
+	end
+
+	def add_image
+		pic = @item.pictures.new
+		pic.image = params[:file]
+		pic.save
+		set_item()
 		respond_with(@item)
 	end
 
@@ -35,6 +43,10 @@ class ItemsController < ApplicationController
 
 	def item_params
 		params.require(:item).permit!
+	end
+
+	def set_item
+		@item = Item.find_by(id: params[:id])
 	end
 	# def data
 	# 	file = JSON.parse(File.read('data/items.json'))

@@ -18,4 +18,10 @@ class Item
 		res
 	end
 
+	def as_embedded
+		res = as_document
+		res["_id"] = res["_id"].to_s
+		res
+	end
+
 end

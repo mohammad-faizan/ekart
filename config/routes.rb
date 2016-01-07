@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   root 'items#index'
 
-  resources :items
-
+  resources :items do
+  	member do
+  		post 'add_image'
+  	end
+  end
 end

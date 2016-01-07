@@ -3,7 +3,8 @@ var ekartApp = angular.module('Ekart',
 		'ngRoute',
 		'appControllers',
 		'availabilityFilter',
-		'itemServices'
+		'itemServices',
+		'angularFileUpload'
 	]
 );
 

@@ -3,7 +3,7 @@
   <div class='form-group'>
     <label class='col-sm-3 control-label'></label>
     <div class='col-sm-8'>
-      <a href='#/item/new' class='btn btn-info'>New Item</a>
+      <a href='#/items/new' class='btn btn-info'>New Item</a>
     </div>
   </div>
 
@@ -29,7 +29,7 @@
     <div ng-repeat='item in items | filter: searchQuery | orderBy: sortBy' class="container mg-top">
       <div class="row">
         <div class="col-xs-3">
-          <a href="#/{{ item._id }}"><img ng-src='{{ item.image }}' class='item-image'></a>
+          <a href="#/{{ item._id }}"><img ng-src='{{ item.pictures[0].small }}' class='item-image'></a>
         </div>
         <div class="col-xs-6">
           <dl id='item-{{item.id}}'>

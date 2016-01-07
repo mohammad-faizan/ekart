@@ -3,8 +3,8 @@
   They will automatically be included in application.css.
 */
 .item-image {
-	width: 250px;
-	height: 200px;
+	width: 180px;
+	height: 140px;
 	border: 1px solid #ccc;
 }
 
@@ -14,4 +14,8 @@
 .availability {
 	font-size: 50px;
 	color: #000;
+}
+
+.mg-b1 {
+	margin-bottom: 4px;
 }

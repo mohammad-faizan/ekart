@@ -44,3 +44,4 @@ gem 'mongoid', '~> 5.0.0'
 gem 'thin'
 gem 'byebug', group: [:development, :test]
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
+gem 'angularjs-file-upload-rails', '~> 1.1.6'
